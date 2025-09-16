@@ -1,71 +1,42 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Dash's IT & Design — Home</title>
-  <meta name="description" content="Helping with IT and graphic design." />
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Dash's IT & Design</title>
+  <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
-  <div class="site">
-    <!-- HEADER -->
-    <header>
-      <div class="glass header-box">
-        <div class="logo">
-          <div class="title">Dash's IT & Design</div>
-        </div>
-        <nav>
-          <a href="index.html">Home</a>
-          <a href="#services">Services</a>
-          <a href="contact.html">Contact</a>
-        </nav>
-      </div>
-    </header>
+  <!-- Header -->
+  <header class="header">
+    <h1>Dash's IT & Design</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
 
-    <!-- HERO -->
-    <main>
-      <section class="hero glass">
-        <div>
-          <h1 class="h-title">Helping with <span style="color:var(--accent1)">IT and Graphic Design</span></h1>
-          <p class="lead">
-            Hi, I'm Dash, a teen with a lifelong passion for technology. From a very young age, I was fascinated by computers. Over the years, I’ve been teaching myself coding, troubleshooting, and graphic design.
-          </p>
-          <div class="cta-row">
-            <a href="contact.html" class="btn">Email me</a>
-            <a href="#services" class="btn secondary">See services</a>
-          </div>
-        </div>
-      </section>
+  <!-- Hero -->
+  <section class="hero panel">
+    <h2>Helping with IT and Graphic Design</h2>
+    <p>Hi I'm Dash, I'm a teen and I've always had a passion for technology. From a very young age, I was fascinated by computers, and over the years, I’ve been teaching myself coding, troubleshooting, and graphic design.</p>
+    <a href="contact.html" class="cta-btn">Email Me</a>
+  </section>
 
-      <!-- SERVICES -->
-      <section id="services" class="glass">
-        <h2>What I Do</h2>
-        <div class="grad-line"></div>
-        <div class="features">
-          <div class="feature glass-subtle">
-            <h4>IT Support</h4>
-            <p>Software troubleshooting, system setup, and general IT help.</p>
-          </div>
-          <div class="feature glass-subtle">
-            <h4>Graphic Design</h4>
-            <p>Logos, sleek layouts, and creative visuals tailored to you.</p>
-          </div>
-          <div class="feature glass-subtle">
-            <h4>Web Projects</h4>
-            <p>Modern, responsive websites with clean design and frosted style.</p>
-          </div>
-        </div>
-      </section>
-    </main>
-
-    <!-- FOOTER -->
-    <footer>
-      © <span id="year"></span> Dash's IT & Design • Built with frosted glass
-    </footer>
-  </div>
-  <script>
-    document.getElementById('year').innerText = new Date().getFullYear();
-  </script>
+  <!-- Services -->
+  <section class="services">
+    <div class="panel">
+      <h3>Software Troubleshooting</h3>
+      <p>Fast and clear solutions for software errors and system issues.</p>
+    </div>
+    <div class="panel">
+      <h3>IT Support</h3>
+      <p>Helping small businesses and individuals with reliable IT support.</p>
+    </div>
+    <div class="panel">
+      <h3>Graphic Design</h3>
+      <p>Creative, modern visuals designed for your brand or projects.</p>
+    </div>
+  </section>
 </body>
 </html>
