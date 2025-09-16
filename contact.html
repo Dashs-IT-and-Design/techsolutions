@@ -1,64 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contact - Dash's IT & Design</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - My GitHub Site</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header class="frosted-header">
-    <div class="logo">Dash's IT & Design</div>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="index.html#services">Services</a>
-      <a href="contact.html">Contact</a>
-    </nav>
-  </header>
+    <!-- Header -->
+    <header>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="contact.html">Email Me</a>
+        </nav>
+    </header>
 
-  <main>
-    <section class="panel contact-section">
-      <h1>Contact Me</h1>
-      <p>Email me directly:
-        <a class="cta-link" href="mailto:dashsitanddesign@gmail.com">
-          dashsitanddesign@gmail.com
-        </a>
-      </p>
+    <!-- Contact Section -->
+    <main>
+        <section class="contact">
+            <h1>Contact Me</h1>
+            <p>Email: example@email.com</p>
+            <p>Phone: +61 123 456 789</p>
+            <p>Feel free to reach out for any IT solutions or inquiries!</p>
+        </section>
+    </main>
 
-      <form id="contactForm" action="https://formspree.io/f/mpwjevpo" method="POST">
-        <input type="text" name="name" placeholder="Full name" required>
-        <input type="email" name="email" placeholder="Email" required>
-        <input type="text" name="subject" placeholder="Subject">
-        <textarea name="message" placeholder="How can I help you?" required></textarea>
-        <button type="submit">Send</button>
-      </form>
-      <div id="formStatus"></div>
-    </section>
-  </main>
-
-  <script>
-    const form = document.getElementById('contactForm');
-    const statusDiv = document.getElementById('formStatus');
-
-    form.addEventListener('submit', async (e) => {
-      e.preventDefault();
-      const data = new FormData(form);
-      try {
-        const response = await fetch(form.action, {
-          method: form.method,
-          body: data,
-          headers: { 'Accept': 'application/json' }
-        });
-        if (response.ok) {
-          statusDiv.innerHTML = "Thanks for your message! I'll get back to you soon.";
-          form.reset();
-        } else {
-          statusDiv.innerHTML = "Oops! There was a problem sending your form.";
-        }
-      } catch (err) {
-        statusDiv.innerHTML = "Oops! Something went wrong.";
-      }
-    });
-  </script>
+    <footer>
+        <p>&copy; 2025 My GitHub Site</p>
+    </footer>
 </body>
 </html>
