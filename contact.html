@@ -1,52 +1,39 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Contact — Dash's IT & Design</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact - Dash's IT & Design</title>
+  <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
-  <div class="site">
-    <!-- HEADER -->
-    <header>
-      <div class="glass header-box">
-        <div class="logo">
-          <div class="title">Dash's IT & Design</div>
-        </div>
-        <nav>
-          <a href="index.html">Home</a>
-          <a href="index.html#services">Services</a>
-          <a href="contact.html">Contact</a>
-        </nav>
-      </div>
-    </header>
+  <!-- Frozen Header -->
+  <header class="header">
+    <h1>Contact Me</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="contact.html" class="active">Contact</a>
+    </nav>
+  </header>
 
-    <!-- CONTACT -->
-    <main>
-      <section class="glass">
-        <h2>Contact Me</h2>
-        <div class="grad-line"></div>
-        <p class="muted">Email me directly: 
-          <a href="mailto:dashsitanddesign@gmail.com">dashsitanddesign@gmail.com</a>
-        </p>
+  <!-- Contact Form -->
+  <section class="contact panel">
+    <h2>Get in Touch</h2>
+    <form action="https://formspree.io/f/mpwjevpo" method="POST">
+      <label>Full Name</label>
+      <input type="text" name="name" required>
 
-        <form action="https://formspree.io/f/mpwjevpo" method="POST" class="panel">
-          <input type="text" name="name" placeholder="Full name" required class="glass-input"/>
-          <input type="email" name="email" placeholder="Email" required class="glass-input"/>
-          <input type="text" name="subject" placeholder="Subject" class="glass-input"/>
-          <textarea name="message" placeholder="How can I help you?" class="glass-input"></textarea>
-          <button type="submit" class="btn">Send message</button>
-        </form>
-      </section>
-    </main>
+      <label>Email</label>
+      <input type="email" name="_replyto" required>
 
-    <footer>
-      © <span id="year"></span> Dash's IT & Design • Let's build something cool
-    </footer>
-  </div>
-  <script>
-    document.getElementById('year').innerText = new Date().getFullYear();
-  </script>
+      <label>Subject</label>
+      <input type="text" name="subject" required>
+
+      <label>How can I help you?</label>
+      <textarea name="message" rows="5" required></textarea>
+
+      <button type="submit">Send</button>
+    </form>
+  </section>
 </body>
 </html>
