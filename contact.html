@@ -1,39 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contact - Dash's IT & Design</title>
-  <link rel="stylesheet" href="style.css"/>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <!-- Frozen Header -->
-  <header class="header">
-    <h1>Contact Me</h1>
+  <header class="frosted-header">
+    <div class="logo">Dash's IT & Design</div>
     <nav>
       <a href="index.html">Home</a>
-      <a href="contact.html" class="active">Contact</a>
+      <a href="index.html#services">Services</a>
+      <a href="contact.html">Contact</a>
     </nav>
   </header>
 
-  <!-- Contact Form -->
-  <section class="contact panel">
-    <h2>Get in Touch</h2>
-    <form action="https://formspree.io/f/mpwjevpo" method="POST">
-      <label>Full Name</label>
-      <input type="text" name="name" required>
+  <main>
+    <section class="panel contact-section">
+      <h1>Contact Me</h1>
+      <p>Email me directly:
+        <a class="cta-link" href="mailto:dashsitanddesign@gmail.com">
+          dashsitanddesign@gmail.com
+        </a>
+      </p>
 
-      <label>Email</label>
-      <input type="email" name="_replyto" required>
+      <form id="contactForm" action="https://formspree.io/f/mpwjevpo" method="POST">
+        <input type="text" name="name" placeholder="Full name" required>
+        <input type="email" name="email" placeholder="Email" required>
+        <input type="text" name="subject" placeholder="Subject">
+        <textarea name="message" placeholder="How can I help you?" required></textarea>
+        <button type="submit">Send</button>
+      </form>
+      <div id="formStatus"></div>
+    </section>
+  </main>
 
-      <label>Subject</label>
-      <input type="text" name="subject" required>
+  <script>
+    const form = document.getElementById('contactForm');
+    const statusDiv = document.getElementById('formStatus');
 
-      <label>How can I help you?</label>
-      <textarea name="message" rows="5" required></textarea>
-
-      <button type="submit">Send</button>
-    </form>
-  </section>
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const data = new FormData(form);
+      try {
+        const response = await fetch(form.action, {
+          method: form.method,
+          body: data,
+          headers: { 'Accept': 'application/json' }
+        });
+        if (response.ok) {
+          statusDiv.innerHTML = "Thanks for your message! I'll get back to you soon.";
+          form.reset();
+        } else {
+          statusDiv.innerHTML = "Oops! There was a problem sending your form.";
+        }
+      } catch (err) {
+        statusDiv.innerHTML = "Oops! Something went wrong.";
+      }
+    });
+  </script>
 </body>
 </html>
