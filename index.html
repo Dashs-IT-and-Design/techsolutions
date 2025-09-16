@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dash's IT & Design</title>
+  <style>
+    /* Reset */
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: linear-gradient(135deg, #0a0f1f, #1b2735);
+      color: white;
+      line-height: 1.6;
+    }
+
+    /* Header */
+    header {
+      position: sticky;
+      top: 0;
+      backdrop-filter: blur(10px);
+      background: rgba(0, 0, 0, 0.4);
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    header h1 {
+      font-size: 1.5rem;
+    }
+    nav a {
+      margin-left: 1rem;
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    /* Hero */
+    .hero {
+      height: 90vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 2rem;
+    }
+    .hero h2 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+    .hero p {
+      max-width: 600px;
+      margin-bottom: 2rem;
+      opacity: 0.8;
+    }
+    .hero button {
+      background: rgba(255, 255, 255, 0.1);
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      padding: 0.75rem 1.5rem;
+      border-radius: 12px;
+      color: white;
+      cursor: pointer;
+      backdrop-filter: blur(8px);
+      transition: background 0.3s;
+    }
+    .hero button:hover {
+      background: rgba(255, 255, 255, 0.2);
+    }
+
+    /* Sections */
+    section {
+      padding: 4rem 2rem;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    section h3 {
+      font-size: 1.8rem;
+      margin-bottom: 1rem;
+      text-align: center;
+    }
+    section p {
+      text-align: center;
+      opacity: 0.9;
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 2rem;
+      font-size: 0.9rem;
+      opacity: 0.6;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Dash’s IT & Design</h1>
+    <nav>
+      <a href="#services">Services</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <div class="hero">
+    <h2>Smart IT & Creative Design Solutions</h2>
+    <p>Helping businesses and individuals with modern tech support, software troubleshooting, and sleek design.</p>
+    <button>Book a Call</button>
+  </div>
+
+  <section id="services">
+    <h3>Our Services</h3>
+    <p>Device troubleshooting, IT support, and creative digital design to help your business look and perform its best.</p>
+  </section>
+
+  <section id="about">
+    <h3>About Us</h3>
+    <p>We blend technology and creativity to deliver solutions that are both functional and beautiful.</p>
+  </section>
+
+  <section id="contact">
+    <h3>Contact</h3>
+    <p>Email: yourname@email.com</p>
+  </section>
+
+  <footer>
+    © 2025 Dash’s IT & Design. All Rights Reserved.
+  </footer>
+</body>
+</html>
