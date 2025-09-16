@@ -90,6 +90,16 @@ textarea.glass-input { min-height:120px; resize:vertical; }
   color:var(--muted);
 }
 
+/* Remove underline from Email me button */
+.no-underline {
+  text-decoration: none;
+}
+
+/* Add spacing below header on contact page */
+.contact-section {
+  margin-top: 40px; /* adjust spacing as needed */
+}
+
 /* FOOTER */
 footer {
   text-align:center;
