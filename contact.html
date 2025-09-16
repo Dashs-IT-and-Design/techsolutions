@@ -1,149 +1,52 @@
-/* Reset */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Contact — Dash's IT & Design</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="site">
+    <!-- HEADER -->
+    <header>
+      <div class="glass header-box">
+        <div class="logo">
+          <div class="title">Dash's IT & Design</div>
+        </div>
+        <nav>
+          <a href="index.html">Home</a>
+          <a href="index.html#services">Services</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+      </div>
+    </header>
 
-body {
-  font-family: "Segoe UI", Arial, sans-serif;
-  background: repeating-linear-gradient(
-    45deg,
-    #0a0f1c,
-    #0a0f1c 20px,
-    #10182b 20px,
-    #10182b 40px
-  );
-  color: #fff;
-  line-height: 1.6;
-  padding: 100px 20px 50px;
-}
+    <!-- CONTACT -->
+    <main>
+      <section class="glass">
+        <h2>Contact Me</h2>
+        <div class="grad-line"></div>
+        <p class="muted">Email me directly: 
+          <a href="mailto:dashsitanddesign@gmail.com">dashsitanddesign@gmail.com</a>
+        </p>
 
-/* Header */
-.header {
-  position: fixed;
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 90%;
-  max-width: 1100px;
-  background: rgba(0, 40, 80, 0.6);
-  backdrop-filter: blur(12px);
-  border: 1px solid rgba(255,255,255,0.15);
-  border-radius: 20px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 15px 25px;
-  z-index: 1000;
-}
+        <form action="https://formspree.io/f/mpwjevpo" method="POST" class="panel">
+          <input type="text" name="name" placeholder="Full name" required class="glass-input"/>
+          <input type="email" name="email" placeholder="Email" required class="glass-input"/>
+          <input type="text" name="subject" placeholder="Subject" class="glass-input"/>
+          <textarea name="message" placeholder="How can I help you?" class="glass-input"></textarea>
+          <button type="submit" class="btn">Send message</button>
+        </form>
+      </section>
+    </main>
 
-.header.floating {
-  margin-top: 20px; /* header floats a bit below top */
-}
-
-.header h1 {
-  font-size: 1.2rem;
-  font-weight: 600;
-}
-
-.header nav a {
-  color: #fff;
-  text-decoration: none;
-  margin-left: 20px;
-  font-weight: 500;
-  transition: color 0.3s ease;
-}
-
-.header nav a:hover,
-.header nav a.active {
-  color: #4db8ff;
-}
-
-/* Panels (Liquid Glassy Boxes) */
-.panel {
-  background: rgba(0, 60, 120, 0.35);
-  border: 1px solid rgba(255, 255, 255, 0.15);
-  border-radius: 20px;
-  padding: 30px;
-  margin: 20px auto;
-  max-width: 900px;
-  backdrop-filter: blur(16px) saturate(140%);
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
-  animation: shimmer 6s infinite linear;
-}
-
-/* Subtle shimmer outline */
-@keyframes shimmer {
-  0% { border-color: rgba(77, 184, 255, 0.2); }
-  50% { border-color: rgba(77, 184, 255, 0.5); }
-  100% { border-color: rgba(77, 184, 255, 0.2); }
-}
-
-/* Hero */
-.hero {
-  text-align: center;
-}
-.hero h2 {
-  font-size: 2rem;
-  margin-bottom: 15px;
-}
-.hero p {
-  font-size: 1.1rem;
-  margin-bottom: 20px;
-}
-.cta-btn {
-  background: #4db8ff;
-  color: #fff;
-  padding: 12px 28px;
-  border-radius: 30px;
-  font-weight: bold;
-  text-decoration: none;
-  transition: 0.3s;
-}
-.cta-btn:hover {
-  background: #3399ff;
-}
-
-/* Services grid */
-.services {
-  display: grid;
-  grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
-  gap: 20px;
-  margin-top: 40px;
-}
-.services .panel h3 {
-  margin-bottom: 10px;
-  color: #4db8ff;
-}
-
-/* Contact */
-.contact h2 {
-  margin-bottom: 20px;
-  text-align: center;
-}
-form {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-}
-input, textarea {
-  padding: 12px 15px;
-  border-radius: 12px;
-  border: 1px solid rgba(255,255,255,0.15);
-  background: rgba(0, 40, 80, 0.35);
-  color: #fff;
-  backdrop-filter: blur(8px);
-}
-button {
-  background: #4db8ff;
-  border: none;
-  padding: 12px;
-  border-radius: 20px;
-  font-weight: bold;
-  cursor: pointer;
-  transition: 0.3s;
-}
-button:hover {
-  background: #3399ff;
-}
+    <footer>
+      © <span id="year"></span> Dash's IT & Design • Let's build something cool
+    </footer>
+  </div>
+  <script>
+    document.getElementById('year').innerText = new Date().getFullYear();
+  </script>
+</body>
+</html>
