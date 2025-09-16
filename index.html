@@ -27,7 +27,6 @@
     .hero{display:grid;grid-template-columns:1fr 420px;gap:28px;align-items:center;margin:36px 0 28px;}
     .h-title{font-size:40px;font-weight:700;line-height:1.02;margin-bottom:14px;}
     .lead{color:var(--muted);margin-bottom:24px;}
-    .cta-row a{color:var(--accent1);font-weight:600;text-decoration:underline;cursor:pointer;}
     .panel{border-radius:12px;padding:18px;background:rgba(255,255,255,0.02);border:1px solid rgba(255,255,255,0.04);backdrop-filter:blur(6px);}
     .contact{display:grid;grid-template-columns:1fr 360px;gap:22px;margin-bottom:60px;}
     input,textarea{background: rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.04);color:#eaf2ff;padding:12px;border-radius:10px;font-size:14px;}
@@ -53,16 +52,13 @@
         <div>
           <h1 class="h-title">Helping with IT and Graphic Design</h1>
           <p class="lead">Hi I'm Dash, I'm a teen and I've always had a passion for technology. From a very young age, I was fascinated by computers, and over the years, I’ve been teaching myself coding, troubleshooting, and graphic design.</p>
-          <div class="cta-row">
-            <a href="#contact">Email me</a>
-          </div>
         </div>
       </section>
 
       <section id="contact" style="margin-top:30px;">
         <h2>Contact</h2>
-        <p class="muted">Prefer email? hello@dashsit.com</p>
         <div class="contact">
+          <!-- Contact Form Panel -->
           <form class="panel">
             <input type="text" placeholder="Full name" required>
             <input type="email" placeholder="Email" required>
@@ -72,9 +68,12 @@
               <button type="submit" class="btn">Send message</button>
             </div>
           </form>
+
+          <!-- Office / Email Panel -->
           <div class="panel">
-            <h4>Office</h4>
-            <p class="muted">Adelaide, Australia</p>
+            <h4>Contact & Office</h4>
+            <p class="muted">Email: <a href="mailto:dashsitanddesign@gmail.com" style="color:var(--accent1);text-decoration:underline;">dashsitanddesign@gmail.com</a></p>
+            <p class="muted">Location: Adelaide, Australia</p>
             <p class="muted">Hours: Mon–Fri 9am–5pm</p>
           </div>
         </div>
