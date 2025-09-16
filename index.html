@@ -29,17 +29,12 @@
     .lead{color:var(--muted);margin-bottom:24px;}
     .cta-row a{color:var(--accent1);font-weight:600;text-decoration:underline;cursor:pointer;}
     .panel{border-radius:12px;padding:18px;background:rgba(255,255,255,0.02);border:1px solid rgba(255,255,255,0.04);backdrop-filter:blur(6px);}
-    .features{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:28px;}
-    .feature{padding:20px;border-radius:12px;background:rgba(255,255,255,0.01);border:1px solid rgba(255,255,255,0.03);}
-    .feature h4{margin-bottom:8px;}
-    .feature p{margin:0;color:var(--muted);font-size:14px;}
     .contact{display:grid;grid-template-columns:1fr 360px;gap:22px;margin-bottom:60px;}
     input,textarea{background: rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.04);color:#eaf2ff;padding:12px;border-radius:10px;font-size:14px;}
     textarea{min-height:120px;resize:vertical;}
     .muted{color:var(--muted);font-size:14px;}
     footer{text-align:center;padding:30px 0;color:var(--muted);border-top:1px solid rgba(255,255,255,0.02);}
-    @media (max-width:980px){.hero{grid-template-columns:1fr;text-align:center;}.features{grid-template-columns:repeat(2,1fr);}.contact{grid-template-columns:1fr;}nav{display:none;}}
-    @media (max-width:560px){.features{grid-template-columns:1fr;}}
+    @media (max-width:980px){.hero{grid-template-columns:1fr;text-align:center;}.contact{grid-template-columns:1fr;}nav{display:none;}}
   </style>
 </head>
 <body>
@@ -48,8 +43,6 @@
       <div class="glass">
         <div class="logo">Dash's IT <span style="font-size:12px;color:var(--muted);margin-left:8px;">Smart IT solutions</span></div>
         <nav>
-          <a href="#services">Services</a>
-          <a href="#work">Work</a>
           <a href="#contact">Contact</a>
         </nav>
       </div>
@@ -58,39 +51,15 @@
     <main>
       <section class="hero">
         <div>
-          <h1 class="h-title">Modern IT support & software — <span style="color:var(--accent1)">built to scale</span></h1>
-          <p class="lead">We combine fast, secure infrastructure with clear support — device repairs, cloud migration, and software troubleshooting for businesses who want reliability without the nonsense.</p>
+          <h1 class="h-title">Helping with IT and Graphic Design</h1>
+          <p class="lead">Hi I'm Dash, I'm a teen and I've always had a passion for technology. From a very young age, I was fascinated by computers, and over the years, I’ve been teaching myself coding, troubleshooting, and graphic design.</p>
           <div class="cta-row">
-            <a href="#contact">Book a text</a>
-          </div>
-          <div style="margin-top:28px;">
-            <div class="panel">
-              <strong>Trusted by local businesses</strong>
-              <div class="muted" style="margin-top:6px;">99.9% uptime, fast on-site repairs, remote support available.</div>
-            </div>
+            <a href="#contact">Email me</a>
           </div>
         </div>
       </section>
 
-      <section id="services">
-        <h2>What we do</h2>
-        <div class="features">
-          <div class="feature">
-            <h4>Device Repair</h4>
-            <p>Fast diagnostics, genuine parts, transparent pricing.</p>
-          </div>
-          <div class="feature">
-            <h4>Cloud Migration</h4>
-            <p>Secure migration with minimal downtime and backups.</p>
-          </div>
-          <div class="feature">
-            <h4>Managed Support</h4>
-            <p>Monthly plans, SLA, monitoring and onsite visits.</p>
-          </div>
-        </div>
-      </section>
-
-      <section id="contact">
+      <section id="contact" style="margin-top:30px;">
         <h2>Contact</h2>
         <p class="muted">Prefer email? hello@dashsit.com</p>
         <div class="contact">
@@ -98,7 +67,7 @@
             <input type="text" placeholder="Full name" required>
             <input type="email" placeholder="Email" required>
             <input type="text" placeholder="Subject">
-            <textarea placeholder="How can we help?"></textarea>
+            <textarea placeholder="How can I help you?"></textarea>
             <div style="display:flex;justify-content:flex-end;margin-top:6px;">
               <button type="submit" class="btn">Send message</button>
             </div>
@@ -113,7 +82,7 @@
     </main>
 
     <footer>
-      © <span id="year"></span> Dash's IT — Built with care
+      © <span id="year"></span> Dash's IT
     </footer>
   </div>
 
