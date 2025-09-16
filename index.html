@@ -30,7 +30,7 @@
 
     .site{max-width:var(--container);margin:0 auto;padding:32px;position:relative; z-index:1;}
 
-    /* Liquid glass panels with glimmer */
+    /* Liquid glass panels (same style for hero and all boxes) */
     .glass, header, footer{
       border-radius:var(--radius);
       background: rgba(255,255,255,0.03);
@@ -45,28 +45,17 @@
       margin-bottom: 24px;
     }
 
-    /* Glimmer animation */
-    @keyframes glimmer {
-      0% {background-position: 0% 50%;}
-      50% {background-position: 100% 50%;}
-      100% {background-position: 0% 50%;}
-    }
-
     .glass::before {
       content: '';
       position: absolute;
       top: -2px; left: -2px; right: -2px; bottom: -2px;
       border-radius: inherit;
       padding: 2px;
-      background: linear-gradient(270deg, rgba(61,180,255,0.3), rgba(123,97,255,0.3), rgba(61,180,255,0.3));
+      background: linear-gradient(270deg, rgba(61,180,255,0.2), rgba(123,97,255,0.2), rgba(61,180,255,0.2));
       background-size: 400% 400%;
       z-index: 1;
       pointer-events: none;
-      animation: glimmer 4s linear infinite;
-      mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-      -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-      mask-composite: exclude;
-      -webkit-mask-composite: destination-out;
+      animation: none; /* removed glimmer for all boxes */
     }
 
     .glass > * {position: relative; z-index:2;}
@@ -86,23 +75,13 @@
     /* Contact Section */
     .contact{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:30px;margin-bottom:60px;}
     input,textarea{
-      background: rgba(255,255,255,0.03);
-      border:1px solid rgba(255,255,255,0.04);
+      background: transparent;
+      border:none;
       color:#eaf2ff;
-      padding:14px;
-      border-radius:12px;
+      padding:12px;
       font-size:14px;
-      backdrop-filter: blur(6px);
-      -webkit-backdrop-filter: blur(6px);
-      box-shadow: inset 0 2px 6px rgba(255,255,255,0.05);
-      transition: all 0.2s ease;
-      width: 100%;
+      width:100%;
       margin-bottom:12px;
-    }
-    input:focus, textarea:focus{
-      border:1px solid var(--accent1);
-      box-shadow: 0 0 12px rgba(61,180,255,0.25);
-      outline:none;
     }
     textarea{min-height:140px;resize:vertical;}
     .muted{color:var(--muted);font-size:14px;}
