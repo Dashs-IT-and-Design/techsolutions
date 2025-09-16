@@ -15,14 +15,7 @@
           <div class="title">Dash's IT & Design</div>
         </div>
 
-        <!-- Hamburger -->
-        <div class="hamburger" id="hamburger">
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
-
-        <nav id="nav-menu">
+        <nav>
           <a href="index.html">Home</a>
           <a href="contact.html">Contact</a>
         </nav>
@@ -55,14 +48,6 @@
 
   <script>
     document.getElementById('year').innerText = new Date().getFullYear();
-
-    // Hamburger menu toggle
-    const hamburger = document.getElementById('hamburger');
-    const navMenu = document.getElementById('nav-menu');
-    hamburger.addEventListener('click', () => {
-      navMenu.classList.toggle('open');
-      hamburger.classList.toggle('active');
-    });
   </script>
 </body>
 </html>
