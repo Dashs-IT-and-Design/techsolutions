@@ -15,7 +15,15 @@
         <div class="logo">
           <div class="title">Dash's IT & Design</div>
         </div>
-        <nav>
+
+        <!-- Hamburger -->
+        <div class="hamburger" id="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+
+        <nav id="nav-menu">
           <a href="index.html">Home</a>
           <a href="#services">Services</a>
           <a href="contact.html">Contact</a>
@@ -33,7 +41,6 @@
           </p>
           <div class="cta-row">
             <a href="contact.html" class="btn no-underline">Email me</a>
-            <!-- "See services" button removed -->
           </div>
         </div>
       </section>
@@ -53,7 +60,7 @@
           </div>
           <div class="feature glass-subtle">
             <h4>Web and App Projects</h4>
-            <p>Designing websites and apps to support you and your business.</p></p>
+            <p>Designing websites and apps to support you and your business.</p>
           </div>
         </div>
       </section>
@@ -67,7 +74,14 @@
 
   <script>
     document.getElementById('year').innerText = new Date().getFullYear();
+
+    // Hamburger menu toggle
+    const hamburger = document.getElementById('hamburger');
+    const navMenu = document.getElementById('nav-menu');
+    hamburger.addEventListener('click', () => {
+      navMenu.classList.toggle('open');
+      hamburger.classList.toggle('active');
+    });
   </script>
 </body>
 </html>
-
