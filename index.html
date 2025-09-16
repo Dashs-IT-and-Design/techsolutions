@@ -6,7 +6,7 @@
   <title>Dash's IT</title>
   <style>
     :root{
-      --bg:#1c1c1c; /* subtle gray background base */
+      --bg:#1c1c1c; /* base gray background */
       --muted:#9aa3b2;
       --accent1:#3db4ff;
       --accent2:#7b61ff;
@@ -20,30 +20,18 @@
     body{
       margin:0;
       font-family:Inter, system-ui, sans-serif;
-      background: var(--bg);
       color:#e7eef8;
       min-height:100vh;
       position:relative;
       overflow-x:hidden;
-    }
-
-    /* Subtle patterned background like InSyncComps */
-    body::before {
-      content: '';
-      position: fixed;
-      top:0; left:0; right:0; bottom:0;
-      background-image:
-        radial-gradient(circle, rgba(255,255,255,0.02) 1px, transparent 1px),
-        radial-gradient(circle, rgba(255,255,255,0.02) 1px, transparent 1px);
-      background-size: 40px 40px;
-      background-position: 0 0, 20px 20px;
-      z-index: 0;
-      pointer-events: none;
+      background: linear-gradient(135deg, rgba(255,255,255,0.02), rgba(255,255,255,0) 70%), 
+                  linear-gradient(225deg, rgba(255,255,255,0.02), rgba(255,255,255,0) 70%), 
+                  var(--bg);
     }
 
     .site{max-width:var(--container);margin:0 auto;padding:32px;position:relative; z-index:1;}
 
-    /* Liquid glass panels */
+    /* Liquid glass panels with glimmer */
     .glass, .panel, header, footer{
       border-radius:var(--radius);
       background: rgba(255,255,255,0.03);
@@ -91,7 +79,7 @@
     nav a:hover{color:white;background:rgba(255,255,255,0.03);}
 
     /* Hero */
-    .hero{display:grid;grid-template-columns:1fr 420px;gap:28px;align-items:center;margin:36px 0 28px;}
+    .hero{display:grid;grid-template-columns:1fr;gap:28px;align-items:center;margin:36px 0 28px;}
     .h-title{font-size:40px;font-weight:700;line-height:1.02;margin-bottom:14px;}
     .lead{color:var(--muted);margin-bottom:24px;}
 
