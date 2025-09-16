@@ -1,35 +1,72 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My GitHub Site</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Dash's IT & Design — Home</title>
+  <meta name="description" content="Helping with IT and graphic design." />
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    <!-- Header -->
+  <div class="site">
+    <!-- HEADER -->
     <header>
+      <div class="glass header-box">
+        <div class="logo">
+          <div class="title">Dash's IT & Design</div>
+        </div>
         <nav>
-            <a href="index.html">Home</a>
-            <a href="contact.html">Email Me</a>
+          <a href="index.html">Home</a>
+          <a href="#services">Services</a>
+          <a href="contact.html">Contact</a>
         </nav>
+      </div>
     </header>
 
-    <!-- Hero Section -->
+    <!-- HERO -->
     <main>
-        <section class="hero">
-            <h1>Welcome to My Website</h1>
-            <p>Your IT solutions start here.</p>
-        </section>
+      <section class="hero glass">
+        <div>
+          <h1 class="h-title">Helping with <span style="color:var(--accent1)">IT and Graphic Design</span></h1>
+          <p class="lead">
+            Hi, I'm Dash, a teen with a lifelong passion for technology. From a very young age, I was fascinated by computers. Over the years, I’ve been teaching myself coding, troubleshooting, and graphic design.
+          </p>
+          <div class="cta-row">
+            <a href="contact.html" class="btn">Email me</a>
+            <a href="#services" class="btn secondary">See services</a>
+          </div>
+        </div>
+      </section>
 
-        <section class="about">
-            <h2>About Us</h2>
-            <p>We provide professional IT troubleshooting and software solutions.</p>
-        </section>
+      <!-- SERVICES -->
+      <section id="services" class="glass">
+        <h2>What I Do</h2>
+        <div class="grad-line"></div>
+        <div class="features">
+          <div class="feature glass-subtle">
+            <h4>IT Support</h4>
+            <p>Software troubleshooting, system setup, and general IT help.</p>
+          </div>
+          <div class="feature glass-subtle">
+            <h4>Graphic Design</h4>
+            <p>Logos, sleek layouts, and creative visuals tailored to you.</p>
+          </div>
+          <div class="feature glass-subtle">
+            <h4>Web Projects</h4>
+            <p>Modern, responsive websites with clean design and frosted style.</p>
+          </div>
+        </div>
+      </section>
     </main>
 
+    <!-- FOOTER -->
     <footer>
-        <p>&copy; 2025 My GitHub Site</p>
+      © <span id="year"></span> Dash's IT & Design • Built with frosted glass
     </footer>
+  </div>
+
+  <script>
+    document.getElementById('year').innerText = new Date().getFullYear();
+  </script>
 </body>
 </html>
