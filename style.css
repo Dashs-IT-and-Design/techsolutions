@@ -149,3 +149,66 @@ footer {
   form.panel { gap:6px; }
 }
 
+/* --- NEW EFFECTS --- */
+
+/* Smooth fade/slide in when sections appear */
+.glass, .glass-subtle {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.8s ease forwards;
+}
+.glass-subtle {
+  animation-delay: 0.2s;
+}
+@keyframes fadeInUp {
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Hero title gradient shimmer */
+.h-title span {
+  background: linear-gradient(90deg, var(--accent1), var(--accent2));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-size: 200% auto;
+  animation: shimmer 6s linear infinite;
+}
+@keyframes shimmer {
+  0% { background-position: 0% center; }
+  100% { background-position: 200% center; }
+}
+
+/* Floating cards on hover */
+.feature {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.feature:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.4);
+}
+
+/* Inputs glow on focus */
+.glass-input:focus {
+  outline: none;
+  border-color: var(--accent1);
+  box-shadow: 0 0 8px rgba(61,180,255,0.4);
+  transition: 0.3s ease;
+}
+
+/* Button pulse hover */
+.btn {
+  position: relative;
+  overflow: hidden;
+}
+.btn::after {
+  content: "";
+  position: absolute;
+  top:0; left:-100%;
+  width:100%; height:100%;
+  background: rgba(255,255,255,0.3);
+  transform: skewX(-20deg);
+  transition: left 0.5s ease;
+}
+.btn:hover::after {
+  left:200%;
+}
+
