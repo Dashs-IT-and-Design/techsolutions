@@ -27,9 +27,9 @@
     <main>
       <section class="hero glass">
         <div>
-          <h1 class="h-title">Get in Touch</h1>
+          <h1 class="h-title">Contact Me</h1>
           <p class="lead">
-            Have a project, need IT support, or want a design made? Reach out below — I’d love to help!
+            Need IT help, design work, or have a project in mind? Reach out below — I’d love to hear from you!
           </p>
           <div class="cta-row">
             <a href="mailto:youremail@example.com" class="btn no-underline">Email me</a>
@@ -37,11 +37,21 @@
         </div>
       </section>
 
-      <!-- CONTACT FORM / INFO -->
       <section id="contact" class="glass">
-        <h2>Contact Details</h2>
+        <h2>Send a Message</h2>
         <div class="grad-line"></div>
-        <p>You can reach me by email at <strong>dashsitanddesign@gmail.com</strong>, or simply use the button above.</p>
+        <form>
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" required />
+
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" required />
+
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="5" required></textarea>
+
+          <button type="submit" class="btn">Send Message</button>
+        </form>
       </section>
     </main>
 
