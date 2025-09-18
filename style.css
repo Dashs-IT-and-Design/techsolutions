@@ -205,8 +205,19 @@ footer {
   left:200%;
 }
 
+/* --- reCAPTCHA STYLING --- */
+.g-recaptcha {
+  margin: 12px 0;
+  transform: scale(0.95); /* slightly smaller to fit design */
+  transform-origin: 0 0;
+}
 
-
-
-
+/* Optional: add subtle frosted glass effect around reCAPTCHA */
+.contact-section .g-recaptcha {
+  padding: 8px;
+  border-radius: var(--radius);
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(61,180,255,0.15);
+  display: inline-block;
+}
 
