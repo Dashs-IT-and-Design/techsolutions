@@ -153,43 +153,15 @@ footer {
   to { opacity: 1; transform: translateY(0); }
 }
 
-/* Hero gradient text with single shine on page load */
+/* Hero gradient text */
 .h-title span {
-  background: linear-gradient(90deg,var(--accent1),var(--accent2));
+  background: linear-gradient(90deg, var(--accent1), var(--accent2));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  display: inline-block;
   position: relative;
-  display: inline;
-  vertical-align: baseline; /* ensures no raised effect */
-  overflow: hidden;
 }
 
-.h-title span::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: -100%;
-  width: 100%;
-  height: 100%;
-  background: rgba(255,255,255,0.4);
-  transform: skewX(-20deg);
-  animation: textShineOnce 2s forwards; /* runs once on page load */
-  animation-delay: 0.2s;
-}
-
-@keyframes textShineOnce {
-  0% { left: -100%; }
-  100% { left: 200%; }
-}
-
-/* Floating cards on hover */
-.feature {
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-.feature:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 12px 30px rgba(0,0,0,0.4);
-}
 
 /* Inputs glow on focus */
 .glass-input:focus {
@@ -214,3 +186,4 @@ footer {
   transition: left 0.5s ease;
 }
 .btn:hover::after { left:200%; }
+
