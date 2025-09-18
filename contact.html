@@ -5,6 +5,8 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Contact — Dash's Tech Solutions</title>
   <link rel="stylesheet" href="style.css" />
+  <!-- Google reCAPTCHA -->
+  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 </head>
 <body>
   <div class="site">
@@ -36,13 +38,17 @@
           <input type="email" name="email" placeholder="Email" required class="glass-input"/>
           <input type="text" name="subject" placeholder="Subject" class="glass-input"/>
           <textarea name="message" placeholder="How can I help you?" class="glass-input"></textarea>
+
+          <!-- Google reCAPTCHA -->
+          <div class="g-recaptcha" data-sitekey="6LezAs4rAAAAAF6_8IytCSeAvADkQEbZnssgI-P6"></div>
+
           <button type="submit" class="btn">Send message</button>
         </form>
       </section>
     </main>
 
     <footer>
-      © <span id="year"></span> dashstechsolutions.com
+      © <span id="year"></span> Dash's Tech Solutions
     </footer>
   </div>
 
@@ -51,4 +57,3 @@
   </script>
 </body>
 </html>
-
