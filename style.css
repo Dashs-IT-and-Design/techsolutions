@@ -183,14 +183,33 @@ footer {
   to { opacity: 1; transform: translateY(0); }
 }
 
-/* Hero gradient text with subtle shine animation */
+/* HERO TEXT - gradient + single shine on load */
 .h-title span {
-  background: linear-gradient(90deg,var(--accent1),var(--accent2));
+  background: linear-gradient(90deg, var(--accent1), var(--accent2));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   position: relative;
   display: inline-block;
   overflow: hidden;
+  transform: none; /* ensures no raised/shifted effect */
+}
+
+.h-title span::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: rgba(255,255,255,0.4);
+  transform: skewX(-20deg);
+  animation: textShineOnce 2s forwards; /* runs once */
+  animation-delay: 0.2s; /* optional slight delay */
+}
+
+@keyframes textShineOnce {
+  0% { left: -100%; }
+  100% { left: 200%; }
 }
 
 /* Floating cards on hover */
@@ -209,4 +228,5 @@ footer {
   box-shadow: 0 0 8px rgba(61,180,255,0.4);
   transition: 0.3s ease;
 }
+
 
