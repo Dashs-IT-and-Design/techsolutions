@@ -3,7 +3,8 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Contact — Dash's IT & Design</title>
+  <title>Dash's Tech Solutions — Contact</title>
+  <meta name="description" content="Contact Dash's Tech Solutions for IT and graphic design help." />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
@@ -12,37 +13,41 @@
     <header>
       <div class="glass header-box">
         <div class="logo">
-          <div class="title">Dash's IT & Design</div>
+          <div class="title">Dash's Tech Solutions</div>
         </div>
 
         <nav>
           <a href="index.html">Home</a>
-          <a href="contact.html">Contact</a>
+          <a href="contact.html" class="active">Contact</a>
         </nav>
       </div>
     </header>
 
-    <!-- CONTACT -->
+    <!-- CONTACT SECTION -->
     <main>
-      <section class="glass contact-section">
-        <h2>Contact Me</h2>
-        <div class="grad-line"></div>
-        <p class="muted">Email me directly: 
-          <a href="mailto:dashsitanddesign@gmail.com">dashsitanddesign@gmail.com</a>
-        </p>
+      <section class="hero glass">
+        <div>
+          <h1 class="h-title">Get in Touch</h1>
+          <p class="lead">
+            Have a project, need IT support, or want a design made? Reach out below — I’d love to help!
+          </p>
+          <div class="cta-row">
+            <a href="mailto:youremail@example.com" class="btn no-underline">Email me</a>
+          </div>
+        </div>
+      </section>
 
-        <form action="https://formspree.io/f/mpwjevpo" method="POST" class="panel">
-          <input type="text" name="name" placeholder="Full name" required class="glass-input"/>
-          <input type="email" name="email" placeholder="Email" required class="glass-input"/>
-          <input type="text" name="subject" placeholder="Subject" class="glass-input"/>
-          <textarea name="message" placeholder="How can I help you?" class="glass-input"></textarea>
-          <button type="submit" class="btn">Send message</button>
-        </form>
+      <!-- CONTACT FORM / INFO -->
+      <section id="contact" class="glass">
+        <h2>Contact Details</h2>
+        <div class="grad-line"></div>
+        <p>You can reach me by email at <strong>youremail@example.com</strong>, or simply use the button above.</p>
       </section>
     </main>
 
+    <!-- FOOTER -->
     <footer>
-      © <span id="year"></span> Dash's IT & Design • Let's build something cool
+      © <span id="year"></span> dashstechsolutions.com.au
     </footer>
   </div>
 
