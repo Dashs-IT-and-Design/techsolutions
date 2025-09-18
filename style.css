@@ -193,24 +193,6 @@ footer {
   overflow: hidden;
 }
 
-.h-title span::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: -100%;
-  width: 100%;
-  height: 100%;
-  background: rgba(255,255,255,0.2);
-  transform: skewX(-20deg);
-  animation: textShine 4s infinite;
-}
-
-@keyframes textShine {
-  0% { left: -100%; }
-  50% { left: 200%; }
-  100% { left: 200%; }
-}
-
 /* Floating cards on hover */
 .feature {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -227,3 +209,4 @@ footer {
   box-shadow: 0 0 8px rgba(61,180,255,0.4);
   transition: 0.3s ease;
 }
+
