@@ -162,7 +162,6 @@ footer {
   position: relative;
 }
 
-
 /* Inputs glow on focus */
 .glass-input:focus {
   outline: none;
@@ -186,4 +185,5 @@ footer {
   transition: left 0.5s ease;
 }
 .btn:hover::after { left:200%; }
+
 
