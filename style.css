@@ -1,10 +1,15 @@
+/* === Variables === */
 :root {
-  --bg: #0b1020;
-  --muted: #9aa3b2;
-  --accent1: #3db4ff;
-  --accent2: #4a77ff;
+  --bg:#0b1020;
+  --muted:#9aa3b2;
+  --accent1:#3db4ff;
+  --accent2:#4a77ff;
+  --glass-bg: rgba(255,255,255,0.07);
+  --glass-border: rgba(255,255,255,0.15);
+  --shadow: 0 4px 20px rgba(0,0,0,0.4);
 }
 
+/* === Reset === */
 * {
   margin: 0;
   padding: 0;
@@ -16,56 +21,98 @@ body {
   color: white;
   font-family: Arial, sans-serif;
   line-height: 1.6;
+  overflow-x: hidden;
 }
 
+/* === Header === */
 header {
-  padding: 20px;
+  padding: 20px 40px;
   background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 60px; /* 👈 adds space below header */
+  border-bottom: 1px solid var(--glass-border);
+  box-shadow: var(--shadow);
+  position: sticky;
+  top: 0;
+  z-index: 100;
 }
 
 header h1 {
   font-size: 1.5rem;
+  background: linear-gradient(90deg, var(--accent1), var(--accent2));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 700;
 }
 
 nav a {
-  margin-left: 15px;
+  margin-left: 20px;
   color: var(--accent1);
   text-decoration: none;
   font-weight: bold;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+nav a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0;
+  height: 2px;
+  background: var(--accent2);
+  transition: width 0.3s ease;
 }
 
 nav a:hover {
   color: var(--accent2);
 }
 
-main {
-  padding: 40px;
+nav a:hover::after {
+  width: 100%;
 }
 
+/* === Hero === */
 #hero {
   text-align: center;
-  padding: 80px 20px;
+  padding: 120px 20px 100px;
+  position: relative;
 }
 
 #hero h2 {
-  font-size: 2rem;
+  font-size: 2.5rem;
   background: linear-gradient(90deg, var(--accent1), var(--accent2));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  background-size: 200% 200%;
+  animation: gradientShift 5s ease infinite;
 }
 
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* === Contact === */
 #contact {
-  margin-top: 80px; /* space from hero */
+  margin: 120px auto;
+  max-width: 600px;
   text-align: center;
+  padding: 40px;
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  border-radius: 16px;
+  box-shadow: var(--shadow);
 }
 
 #contact h3 {
-  margin-bottom: 15px;
-  font-size: 1.3rem;
+  margin-bottom: 20px;
+  font-size: 1.5rem;
+  color: var(--accent1);
 }
 
 #contact p {
@@ -76,8 +123,69 @@ main {
   color: var(--accent1);
   font-weight: bold;
   text-decoration: none;
+  transition: color 0.3s ease;
 }
 
 #contact p a:hover {
   color: var(--accent2);
+}
+
+/* === Button styles === */
+.button {
+  display: inline-block;
+  padding: 12px 28px;
+  margin-top: 20px;
+  background: linear-gradient(90deg, var(--accent1), var(--accent2));
+  color: white;
+  font-weight: bold;
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+  text-decoration: none;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 30px rgba(0,0,0,0.6);
+}
+
+/* === Utility / Effects === */
+.glass {
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  backdrop-filter: blur(12px);
+  border-radius: 16px;
+  box-shadow: var(--shadow);
+}
+
+/* Mouse-light shimmer background */
+.mouse-light {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  background: radial-gradient(circle 200px at var(--x, 50%) var(--y, 50%), rgba(255,255,255,0.1), transparent 80%);
+  z-index: 0;
+}
+
+/* === Footer === */
+footer {
+  text-align: center;
+  padding: 30px;
+  color: var(--muted);
+  font-size: 0.9rem;
+  border-top: 1px solid var(--glass-border);
+  margin-top: 100px;
+}
+
+/* === Animations / Transitions === */
+a, .button {
+  transition: all 0.3s ease;
+}
+
+section {
+  position: relative;
+  z-index: 1;
 }
