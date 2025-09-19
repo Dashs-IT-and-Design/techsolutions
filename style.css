@@ -176,3 +176,17 @@ footer {
 @keyframes fadeInUp {
   to { opacity:1; transform: translateY(0); }
 }
+
+/* Gradient email link without box or hover shimmer */
+.gradient-link {
+  background: linear-gradient(90deg, var(--accent1), var(--accent2));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 600;
+  text-decoration: none;
+  transition: opacity 0.3s ease;
+}
+
+.gradient-link:hover {
+  opacity: 0.8;
+}
