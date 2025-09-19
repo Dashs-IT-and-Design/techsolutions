@@ -200,3 +200,22 @@ footer {
   .contact-section { margin-top:16px; padding:12px; }
   form.panel { gap:6px; }
 }
+
+/* Wider screens get more breathing room */
+@media (min-width: 1400px) {
+  .site {
+    max-width: 1400px; /* expands main container */
+    padding: 32px; /* adds spacing */
+  }
+  .h-title {
+    font-size: 56px; /* hero text scales up */
+  }
+  .lead {
+    font-size: 20px;
+    max-width: 60%; /* narrower line for readability */
+  }
+  .features {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+  }
+}
