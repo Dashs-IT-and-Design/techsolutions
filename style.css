@@ -99,7 +99,7 @@ textarea.glass-input { min-height:100px; resize:vertical; }
   box-shadow: 0 8px 25px rgba(61,180,255,0.5);
 }
 
-/* Remove underline from Email me button */
+/* Email me button */
 .no-underline { text-decoration: none; }
 
 /* Contact section spacing */
@@ -190,3 +190,4 @@ footer {
 .btn:hover::after {
   left:200%;
 }
+
