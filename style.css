@@ -59,6 +59,13 @@ nav a:hover { color:white; }
 /* HERO */
 .hero { margin:32px 0; }
 .h-title { font-size:40px; margin-bottom:12px; }
+.h-title span {
+  background: linear-gradient(90deg, var(--accent1), var(--accent2));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+  overflow: hidden;
+}
 .lead { color:var(--muted); margin-bottom:16px; max-width:70% }
 .cta-row { display:flex; gap:12px }
 
@@ -128,38 +135,34 @@ footer {
 
 /* RESPONSIVE */
 @media (max-width:900px){
+  /* Shrink header */
   .header-box { padding:8px 12px; }
   .logo .title { font-size:15px; }
+
+  /* Nav links stacked vertically */
   nav { flex-direction: column; gap:8px; }
   nav a { font-size:15px; }
+
+  /* Hero spacing and font scaling */
   .hero { padding:12px; margin:16px 0; }
   .h-title { font-size:28px; }
   .lead { max-width:100%; margin-bottom:12px; }
+
+  /* Features stacked */
   .features { grid-template-columns:1fr; gap:10px; margin-top:12px; }
+
+  /* Contact form spacing */
   .contact-section { margin-top:16px; padding:12px; }
   form.panel { gap:6px; }
 }
 
-/* --- NEW EFFECTS --- */
-
-/* Smooth fade-in for sections */
-.glass, .glass-subtle {
-  opacity: 0;
-  transform: translateY(20px);
-  animation: fadeInUp 0.8s ease forwards;
+/* Floating cards on hover */
+.feature {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-.glass-subtle { animation-delay: 0.2s; }
-@keyframes fadeInUp {
-  to { opacity: 1; transform: translateY(0); }
-}
-
-/* Hero gradient text */
-.h-title span {
-  background: linear-gradient(90deg, var(--accent1), var(--accent2));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  display: inline-block;
-  position: relative;
+.feature:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.4);
 }
 
 /* Inputs glow on focus */
@@ -170,7 +173,7 @@ footer {
   transition: 0.3s ease;
 }
 
-/* Button hover effect */
+/* Button pulse hover */
 .btn {
   position: relative;
   overflow: hidden;
@@ -184,6 +187,6 @@ footer {
   transform: skewX(-20deg);
   transition: left 0.5s ease;
 }
-.btn:hover::after { left:200%; }
-
-
+.btn:hover::after {
+  left:200%;
+}
