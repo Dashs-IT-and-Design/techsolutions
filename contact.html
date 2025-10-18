@@ -35,22 +35,47 @@
         <h2>Contact Me</h2>
         <div class="grad-line"></div>
 
-        <p class="muted">
-          You can email me directly at
+        <p class="muted">Prefer to send an email directly?</p>
+
+        <p>
           <a href="mailto:dashsitanddesign@gmail.com" class="gradient-link">dashsitanddesign@gmail.com</a>
-          or send a message below.
         </p>
 
-        <form action="https://formspree.io/f/mpwjevpo" method="POST" class="panel">
-          <input type="text" name="name" placeholder="Full name" required class="glass-input" />
-          <input type="email" name="email" placeholder="Email" required class="glass-input" />
-          <input type="text" name="subject" placeholder="Subject" class="glass-input" />
-          <textarea name="message" placeholder="How can I help you?" required class="glass-input"></textarea>
+        <p class="muted">
+          To help me reply faster, please include:
+        </p>
+
+        <ul class="muted">
+          <li>What device or software you need help with</li>
+          <li>Your preferred contact method</li>
+          <li>A short summary of your project or issue</li>
+        </ul>
+
+        <p class="muted">
+          Note: Messages are protected with Google reCAPTCHA and Formspree.
+        </p>
+
+        <form action="https://formspree.io/f/mpwjevpo" method="POST">
+          <label for="name">Full name</label>
+          <input type="text" id="name" name="name" placeholder="Full name" required />
+
+          <label for="email">Email address</label>
+          <input type="email" id="email" name="email" placeholder="Email" required />
+
+          <label for="subject">Subject</label>
+          <input type="text" id="subject" name="subject" placeholder="Subject (e.g., Website, Logo, Support)" />
+
+          <label for="message">Message</label>
+          <textarea id="message" name="message" placeholder="Tell me how I can help — include device, software, or project details" required></textarea>
 
           <!-- reCAPTCHA -->
           <div class="g-recaptcha" data-sitekey="6LezAs4rAAAAAF6_8IytCSeAvADkQEbZnssgI-P6"></div>
 
-          <button type="submit" class="btn">Send message</button>
+          <button type="submit" class="btn">Send Message</button>
+
+          <p class="muted small">
+            By sending, you agree to receive a reply to the email provided.
+          </p>
         </form>
       </section>
     </main>
