@@ -5,12 +5,12 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Contact — Dash's Tech Solutions</title>
   <link rel="stylesheet" href="style.css" />
-  <link rel="icon" type="image/png" href="favicon-96x96.png" />
-  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
-  <link rel="shortcut icon" href="favicon.ico" />
-  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
+  <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="shortcut icon" href="/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
   <meta name="apple-mobile-web-app-title" content="TechSolutions" />
-  <link rel="manifest" href="site.webmanifest" />
+  <link rel="manifest" href="/site.webmanifest" />
   <!-- Google reCAPTCHA -->
   <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 </head>
@@ -29,53 +29,26 @@
       </div>
     </header>
 
-    <!-- CONTACT -->
+    <!-- CONTACT SECTION -->
     <main>
       <section class="glass contact-section">
         <h2>Contact Me</h2>
         <div class="grad-line"></div>
 
-        <p class="muted">Prefer to send an email directly?</p>
-
-        <p>
+        <p class="muted">Email me directly: 
           <a href="mailto:dashsitanddesign@gmail.com" class="gradient-link">dashsitanddesign@gmail.com</a>
         </p>
 
-        <p class="muted">
-          To help me reply faster, please include:
-        </p>
-
-        <ul class="muted">
-          <li>What device or software you need help with</li>
-          <li>Your preferred contact method</li>
-          <li>A short summary of your project or issue</li>
-        </ul>
-
-        <p class="muted">
-          Note: Messages are protected with Google reCAPTCHA and Formspree.
-        </p>
-
-        <form action="https://formspree.io/f/mpwjevpo" method="POST">
-          <label for="name">Full name</label>
-          <input type="text" id="name" name="name" placeholder="Full name" required />
-
-          <label for="email">Email address</label>
-          <input type="email" id="email" name="email" placeholder="Email" required />
-
-          <label for="subject">Subject</label>
-          <input type="text" id="subject" name="subject" placeholder="Subject (e.g., Website, Logo, Support)" />
-
-          <label for="message">Message</label>
-          <textarea id="message" name="message" placeholder="Tell me how I can help — include device, software, or project details" required></textarea>
+        <form action="https://formspree.io/f/mpwjevpo" method="POST" class="panel">
+          <input type="text" name="name" placeholder="Full name" required class="glass-input"/>
+          <input type="email" name="email" placeholder="Email" required class="glass-input"/>
+          <input type="text" name="subject" placeholder="Subject" class="glass-input"/>
+          <textarea name="message" placeholder="How can I help you?" class="glass-input"></textarea>
 
           <!-- reCAPTCHA -->
           <div class="g-recaptcha" data-sitekey="6LezAs4rAAAAAF6_8IytCSeAvADkQEbZnssgI-P6"></div>
 
-          <button type="submit" class="btn">Send Message</button>
-
-          <p class="muted small">
-            By sending, you agree to receive a reply to the email provided.
-          </p>
+          <button type="submit" class="btn">Send message</button>
         </form>
       </section>
     </main>
