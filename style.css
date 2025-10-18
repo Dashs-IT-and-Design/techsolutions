@@ -34,7 +34,7 @@ body {
 /* HEADER */
 header {
   position: sticky;
-  top: 20px;
+  top: 32px;
   z-index: 50;
 }
 
@@ -108,6 +108,21 @@ nav a:hover {
   margin-bottom: 14px;
 }
 
+/* ✨ Animated gradient accent text */
+.hero-accent {
+  background: linear-gradient(90deg, var(--accent1), var(--accent2), var(--accent1));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-size: 200%;
+  animation: shimmer 3s ease-in-out infinite;
+}
+
+@keyframes shimmer {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
 .lead {
   color: var(--muted);
   margin-bottom: 20px;
@@ -139,7 +154,7 @@ nav a:hover {
 
 /* CONTACT FORM */
 .contact-section {
-  margin-top: 60px; /* extra space below header */
+  margin-top: 60px;
 }
 
 form.panel {
