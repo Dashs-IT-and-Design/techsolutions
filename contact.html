@@ -1,16 +1,18 @@
-<!doctype html> 
+<!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Contact — Dash's Tech Solutions</title>
+  <meta name="description" content="Contact Dash's Tech Solutions — reach out for IT help, website design, or digital graphics." />
+
   <link rel="stylesheet" href="style.css" />
-  <!-- Google reCAPTCHA -->
+  <link rel="icon" type="image/png" href="favicon-96x96.png" />
   <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 </head>
 <body>
   <div class="site">
-    <!-- HEADER -->
+    <!-- Header -->
     <header>
       <div class="glass header-box">
         <div class="logo">
@@ -18,41 +20,66 @@
         </div>
         <nav>
           <a href="index.html">Home</a>
-          <a href="contact.html">Contact</a>
+          <a href="contact.html" aria-current="page">Contact</a>
         </nav>
       </div>
     </header>
 
-    <!-- CONTACT -->
+    <!-- Contact Section -->
     <main>
-      <section class="glass contact-section">
-        <h2>Contact Me</h2>
-        <div class="grad-line"></div>
-        <p class="muted">Email me directly: 
-          <a href="mailto:dashsitanddesign@gmail.com" class="gradient-link">dashsitanddesign@gmail.com</a>
-        </p>
+      <section class="glass contact-section contact-grid">
+        <div class="contact-info">
+          <h2>Contact Me</h2>
+          <div class="grad-line"></div>
+          <p class="muted">Prefer to send an email directly?</p>
 
-        <form action="https://formspree.io/f/mpwjevpo" method="POST" class="panel">
-          <input type="text" name="name" placeholder="Full name" required class="glass-input"/>
-          <input type="email" name="email" placeholder="Email" required class="glass-input"/>
-          <input type="text" name="subject" placeholder="Subject" class="glass-input"/>
-          <textarea name="message" placeholder="How can I help you?" class="glass-input"></textarea>
+          <p class="contact-email">
+            <a href="mailto:dashsitanddesign@gmail.com" class="gradient-link">dashsitanddesign@gmail.com</a>
+          </p>
 
-          <!-- reCAPTCHA -->
-          <div class="g-recaptcha" data-sitekey="6LezAs4rAAAAAF6_8IytCSeAvADkQEbZnssgI-P6"></div>
+          <p class="muted">To help me reply faster, please include:</p>
+          <ul class="muted small-list">
+            <li>What device or software you need help with</li>
+            <li>Your preferred contact method</li>
+            <li>A short summary of your project or issue</li>
+          </ul>
 
-          <button type="submit" class="btn">Send message</button>
-        </form>
+          <p class="contact-small-note muted">
+            <strong>Note:</strong> Messages are protected with Google reCAPTCHA and Formspree.
+          </p>
+        </div>
+
+        <div class="contact-form-wrapper">
+          <form action="https://formspree.io/f/mpwjevpo" method="POST" class="panel contact-form" novalidate>
+            <label class="sr-only" for="name">Full name</label>
+            <input id="name" type="text" name="name" placeholder="Full name" required class="glass-input" />
+
+            <label class="sr-only" for="email">Email address</label>
+            <input id="email" type="email" name="email" placeholder="Email" required class="glass-input" />
+
+            <label class="sr-only" for="subject">Subject</label>
+            <input id="subject" type="text" name="subject" placeholder="Subject (e.g., Website, Logo, Support)" class="glass-input" />
+
+            <label class="sr-only" for="message">Message</label>
+            <textarea id="message" name="message" placeholder="Tell me how I can help — include device, software, or project details" class="glass-input" required></textarea>
+
+            <div class="g-recaptcha" data-sitekey="6LezAs4rAAAAAF6_8IytCSeAvADkQEbZnssgI-P6"></div>
+
+            <button type="submit" class="btn">Send Message</button>
+            <p class="muted small-note">By sending, you agree to receive a reply to the email provided.</p>
+          </form>
+        </div>
       </section>
     </main>
 
+    <!-- Footer -->
     <footer>
-      © <span id="year"></span> dashstechsolutions.com
+      © <span id="year"></span> Dash's Tech Solutions
     </footer>
   </div>
 
   <script>
-    document.getElementById('year').innerText = new Date().getFullYear();
+    document.getElementById("year").textContent = new Date().getFullYear();
   </script>
 </body>
 </html>
